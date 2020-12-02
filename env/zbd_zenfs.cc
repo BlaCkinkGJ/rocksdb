@@ -458,7 +458,7 @@ Zone *ZonedBlockDevice::AllocateZone(Env::WriteLifeTimeHint file_lifetime) {
     }
   }
 
-#if 0
+#if 1
   /* Try to fill an already open zone(with the best life time diff) */
   for (const auto z : io_zones) {
     if ((!z->open_for_write_) && (z->used_capacity_ > 0) && !z->IsFull()) {
